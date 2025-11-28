@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "esModuleInterop": true,
+    "target": "es2020",
+    "moduleResolution": "nodenext",
+    "module": "NodeNext"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
