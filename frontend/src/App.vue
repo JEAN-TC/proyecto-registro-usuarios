@@ -111,12 +111,4 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
 
-// No longer needed here, DashboardView handles its own logout
-// const handleLogout = () => {
-//   authStore.logout();
-//   router.push('/login');
-// };
-
-// Remove the conditional rendering based on isLoggedIn and related states
-// The router will handle navigation to different views when unauthenticated.
 </script>

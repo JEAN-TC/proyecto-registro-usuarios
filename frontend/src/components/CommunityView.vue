@@ -18,7 +18,7 @@
             <div class="relative z-10">
               <div class="flex justify-between items-start mb-4">
                 <div :class="['w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300', community.bg]">
-                  <component :is="community.icon" size="24" :class="community.color" />
+                  <component :is="community.icon" :size="24" :class="community.color" />
                 </div>
                 <button class="text-xs font-bold text-slate-400 border border-slate-700 px-3 py-1 rounded-full hover:text-white hover:border-purple-500 hover:bg-purple-500/10 transition-all">
                   Unirse
@@ -30,7 +30,7 @@
               
               <div class="flex items-center gap-4 pt-4 border-t border-white/5">
                 <span class="text-xs text-slate-500 flex items-center gap-1.5">
-                  <Users size="14" /> {{ community.members }} miembros
+                  <Users :size="14" /> {{ community.members }} miembros
                 </span>
                 <div class="flex -space-x-2">
                   <div v-for="i in 3" :key="i" class="w-5 h-5 rounded-full bg-slate-700 border border-slate-900"></div>
@@ -41,7 +41,7 @@
         </div>
 
         <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-          <Compass size="20" class="text-pink-500" /> Descubrir más
+          <Compass :size="20" class="text-pink-500" /> Descubrir más
         </h3>
         
         <div class="space-y-4">
@@ -73,7 +73,7 @@
                 <span class="text-xs text-slate-500 mb-1 block">
                   {{ i + 1 }} · Tendencia global
                 </span>
-                <MoreHorizontal size="16" class="text-slate-600 group-hover:text-slate-400" />
+                <MoreHorizontal :size="16" class="text-slate-600 group-hover:text-slate-400" />
               </div>
               <h4 class="text-white font-bold group-hover:text-purple-400 transition-colors">{{ trend.tag }}</h4>
               <span class="text-sm text-slate-400">{{ trend.posts }} posts</span>

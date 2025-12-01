@@ -8,7 +8,7 @@
         : 'text-slate-400 hover:bg-slate-800/50 hover:text-purple-300'
     ]"
   >
-    <component :is="iconComponent" size="24" :class="[`transition-transform group-hover:scale-110`, active ? 'text-purple-500 fill-current' : '']" />
+    <component v-if="iconComponent" :is="iconComponent" :size="24" :class="[`transition-transform group-hover:scale-110`, active ? 'text-purple-500 fill-current' : '']" />
     <span class="text-lg hidden xl:block">{{ label }}</span>
   </button>
 </template>

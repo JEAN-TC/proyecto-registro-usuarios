@@ -25,7 +25,7 @@ export const useAuthStore = defineStore('auth', () => {
       router.push('/login');
     } catch (error) {
       console.error('Error en el registro:', error);
-      // No relanzar el error para asegurar que finally se ejecute
+      throw error; // Relanzar el error para que el componente lo maneje
     } finally {
       loading.value = false;
     }
@@ -43,7 +43,7 @@ export const useAuthStore = defineStore('auth', () => {
       router.push('/');
     } catch (error) {
       console.error('Error en el inicio de sesión:', error);
-      // No relanzar el error para asegurar que finally se ejecute
+      throw error; // Relanzar el error para que el componente lo maneje
     } finally {
       loading.value = false;
     }

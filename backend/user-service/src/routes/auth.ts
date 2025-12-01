@@ -10,6 +10,7 @@ const JWT_SECRET = process.env.JWT_SECRET || 'supersecretkey';
 
 // Register user
 router.post('/register', async (req, res) => {
+  console.log('DEBUG: Received register request with body:', req.body);
   const { email, password, name, bio, profilePictures } = req.body;
 
   if (!email || !password || !name) {
@@ -41,6 +42,7 @@ router.post('/register', async (req, res) => {
 
 // Login user
 router.post('/login', async (req, res) => {
+  console.log('DEBUG: Received login request with body:', req.body);
   const { email, password } = req.body;
 
   if (!email || !password) {
